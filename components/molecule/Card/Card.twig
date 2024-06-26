@@ -1,0 +1,30 @@
+<section id="pricing" class="pricing section light-background">
+	<div class="container aos-init aos-animate" data-aos="fade-up">
+		<div class="row">
+			<div class="col-12 col-sm-12 col-md-6 col-lg-4 mb-4 mb-lg-0">
+				<div class="pricing-table text-center featured-pricing">
+					<h3>
+						{{ title }}
+					</h3>
+
+					<div class="price-wrap">
+						<sup class="currency">{{ currency }}</sup>
+						<span class="price">{{ price }}</span>
+						<span class="per">{{ period }}</span>
+					</div>
+
+					<ul class="list-unstyled">
+						{% for feature in features %}
+							<li class="{{ feature.exclude ? 'exclude' : '' }}">{{ feature.text }}</li>
+						{% endfor %}
+					</ul>
+
+					<p class="mt-5">
+						<a href="#" class="btn-get-started">Get Started</a>
+						<a href="{{ link }}" class="btn-get-started">{{ buttonText }}</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
