@@ -1,0 +1,22 @@
+import { Meta, Canvas, Controls, Story } from '@storybook/blocks';
+import * as ButtonStories from './Button.stories';
+
+<Meta of={ButtonStories} />
+
+# Button
+
+A button is ...
+
+## Stories
+
+### Variations
+
+A button can be of primary importance.
+
+<Story of={ButtonStories.Primary} />
+<Controls of={ButtonStories.Primary} />
+
+A button can be of secondary importance.
+
+<Story of={ButtonStories.Secondary} />
+<Controls of={ButtonStories.Secondary} />

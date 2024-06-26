@@ -1,0 +1,37 @@
+{
+  "name": "dp-timber-theme",
+  "packageManager": "yarn@4.1.1",
+  "devDependencies": {
+    "@chromatic-com/storybook": "^1.5.0",
+    "@storybook/addon-a11y": "^8.1.5",
+    "@storybook/addon-essentials": "^8.1.5",
+    "@storybook/addon-interactions": "^8.1.5",
+    "@storybook/addon-links": "^8.1.5",
+    "@storybook/addon-styling-webpack": "^1.0.0",
+    "@storybook/addon-webpack5-compiler-swc": "^1.0.3",
+    "@storybook/blocks": "^8.1.5",
+    "@storybook/html": "^8.1.5",
+    "@storybook/html-webpack5": "^8.1.5",
+    "@storybook/test": "^8.1.5",
+    "cross-env": "^7.0.3",
+    "laravel-mix": "^6.0.49",
+    "postcss": "^8.4.38",
+    "postcss-custom-properties": "^13.3.10",
+    "resolve-url-loader": "^5.0.0",
+    "sass": "^1.77.4",
+    "sass-loader": "^14.2.1",
+    "storybook": "^8.1.5",
+    "twig": "^1.17.1",
+    "twigjs-loader": "^1.0.3",
+    "webpack": "^5.91.0"
+  },
+  "scripts": {
+    "dev": "yarn development",
+    "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --config=node_modules/laravel-mix/setup/webpack.config.js --watch",
+    "prod": "yarn production",
+    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js  --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  }
+}
