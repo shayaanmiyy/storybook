@@ -1,0 +1,50 @@
+<header id="header" class="header d-flex align-items-center sticky-top">
+	<div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+		<a href="index.html" class="logo d-flex align-items-center">
+			<!-- Uncomment the line below if you also wish to use an image logo -->
+			<!-- <img src="assets/img/logo.png" alt=""> --><h1 class="sitename"> {{  siteTitle }}</h1>
+		</a>
+
+		<nav id="navmenu" class="navmenu">
+			<ul>
+				{% for item in navigation %}
+					<li class="{{ item.dropdown ? 'dropdown' : '' }}">
+						<a href="{{ item.href }}" class="{{ item.active ? 'active' : '' }}">
+							{{ item.name }}
+							{% if item.dropdown %}
+								<i class="bi bi-chevron-down toggle-dropdown"></i>
+							{% endif %}
+						</a>
+						{% if item.dropdown and item.items %}
+							<ul>
+								{% for subitem in item.items %}
+									<li class="{{ subitem.dropdown ? 'dropdown' : '' }}">
+										<a href="{{ subitem.href }}">
+											{{ subitem.name }}
+											{% if subitem.dropdown %}
+												<i class="bi bi-chevron-down toggle-dropdown"></i>
+											{% endif %}
+										</a>
+										{% if subitem.dropdown and subitem.items %}
+											<ul>
+												{% for deepitem in subitem.items %}
+													<li>
+														<a href="{{ deepitem.href }}">{{ deepitem.name }}</a>
+													</li>
+												{% endfor %}
+											</ul>
+										{% endif %}
+									</li>
+								{% endfor %}
+							</ul>
+						{% endif %}
+					</li>
+				{% endfor %}
+			</ul>
+
+			<i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+		</nav>
+
+	</div>
+</header>

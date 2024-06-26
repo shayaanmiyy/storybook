@@ -1,5 +1,12 @@
 /** @type { import('@storybook/html').Preview } */
 import '../components/style.scss';
+
+import "../components/Media/vendor/bootstrap/css/bootstrap.scss";
+import "../components/Media/vendor/bootstrap-icons/bootstrap-icons.scss";
+import "../components/Media/vendor/aos/aos.scss";
+import "../components/Media/vendor/swiper/swiper-bundle.min.scss";
+import "../components/Media/vendor/glightbox/css/glightbox.scss";
+import "../components/Media/css/main.scss";
 // Add viewports for our example device widths.
 const deviceViewports = {
   phone: {
